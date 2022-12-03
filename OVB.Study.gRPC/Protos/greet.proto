@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "OVB.Study.gRPC";
+
+package greet;
+
+service Greeter {
+  rpc Message (Request) returns (Response);
+}
+
+message Request {
+	string title = 1;
+	string description = 2;
+}
+
+message Response{
+	string notification = 1;
+}
